@@ -119,3 +119,18 @@ function concertDisplay(musicalAct) {
 }
 
 concertDisplay(favoriteBandName);
+
+// ---------------
+// SECTION: ARRAYS
+// ---------------
+
+// Task 1: Desktop Items
+
+let desktopItems = ["laptop", "monitors", "charger", "dock", "book"];
+console.log(desktopItems[1]);
+
+desktopItems.push("Infinity Gauntlet");
+
+for (let i = 0; i < desktopItems.length; i++) {
+	console.log(desktopItems[i]);
+}
