@@ -80,3 +80,42 @@ for (let i = 0; i < 10; i++) {
 		console.log("goodbye");
 	}
 }
+
+// ------------------
+// SECTION: FUNCTIONS
+// ------------------
+
+// Task 1: Favorite movie (void functions)
+
+function printMovieName() {
+	let favoriteMovie = "Shrek";
+	console.log(favoriteMovie);
+}
+
+printMovieName();
+
+// Task 2: Favorite band (return functions)
+
+function getUserInput(message) {
+	let inputPrompt = prompt(message);
+	return inputPrompt;
+}
+
+function favoriteBand() {
+	let userInput = getUserInput("What is your favorite band?");
+	return userInput;
+}
+
+let favoriteBandName = favoriteBand();
+console.log(`Favorite band: ${favoriteBandName}`);
+
+// Task 3: Concert
+
+function concertDisplay(musicalAct) {
+	let myStreet = prompt("What street do you live on?");
+	console.log(
+		`It would be great if ${musicalAct} played a show on ${myStreet}!`
+	);
+}
+
+concertDisplay(favoriteBandName);
