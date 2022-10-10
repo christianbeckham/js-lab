@@ -1,3 +1,5 @@
+// "use strict";
+
 // ------------------
 // SECTION: VARIABLES
 // ------------------
@@ -133,4 +135,50 @@ desktopItems.push("Infinity Gauntlet");
 
 for (let i = 0; i < desktopItems.length; i++) {
 	console.log(desktopItems[i]);
+}
+
+// ---------------
+// SECTION: Final
+// ---------------
+
+// Task 1: Magic Number
+
+let magicNumber = Math.floor(Math.random() * 100) + 1;
+let guess = 0;
+
+function getUserInput(message) {
+	let inputPrompt = Number(prompt(message));
+	return inputPrompt;
+}
+
+function checkRange(magicNumber, guessNumber) {
+	if (magicNumber > guessNumber) {
+		console.log("Too low!");
+	} else if (magicNumber < guessNumber) {
+		console.log("Too high!");
+	}
+}
+
+function checkWarmth(magicNumber, guessNumber) {
+	let minusTenRange =
+		magicNumber > guessNumber && magicNumber - 10 <= guessNumber;
+	let overTenRange =
+		magicNumber < guessNumber && magicNumber + 10 >= guessNumber;
+	let withinTen = minusTenRange || overTenRange;
+
+	if (withinTen) {
+		console.log("Getting warmer!");
+	}
+}
+
+while (guess !== magicNumber) {
+	guess = getUserInput("Enter a magic number:");
+
+	if (guess === magicNumber) {
+		console.log(`Congratulations! ${guess} correct magic number.`);
+		break;
+	} else {
+		checkRange(magicNumber, guess);
+		checkWarmth(magicNumber, guess);
+	}
 }
