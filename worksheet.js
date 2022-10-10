@@ -54,3 +54,29 @@ if (randomNumber >= 0 && randomNumber <= 2) {
 } else if (randomNumber === 9 || randomNumber === 10) {
 	console.log("Hendrix");
 }
+
+// ------------------
+// SECTION: FOR LOOPS
+// ------------------
+
+// Task 1
+
+for (let i = 0; i < 7; i++) {
+	console.log("JavaScript is cool!");
+}
+
+// Task 2
+
+for (let i = 0; i < 11; i++) {
+	console.log(i);
+}
+
+// Task 3
+
+for (let i = 0; i < 10; i++) {
+	if (i % 2 === 0) {
+		console.log("hello");
+	} else {
+		console.log("goodbye");
+	}
+}
